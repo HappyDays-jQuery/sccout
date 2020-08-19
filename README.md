@@ -1,4 +1,4 @@
-# sccout
+# scout
 
 ## 開発環境
 
