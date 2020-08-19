@@ -17,6 +17,9 @@
   - `php artisan migrate:refresh --seed`
   - `npm run watch-poll`
   - アクセスログの表示 `docker logs nginx -f`
+
+
+## 本番環境
 - prod(mysql57)
   - `ln -s docker-compose_prod.yml docker-compose.yml`
   - `docker-compose up -d`
