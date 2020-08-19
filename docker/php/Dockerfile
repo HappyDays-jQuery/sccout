@@ -16,6 +16,9 @@ RUN apt-get update \
     tree \
   && docker-php-ext-install zip pdo_mysql
 
+RUN pecl install xdebug \
+  && docker-php-ext-enable xdebug
+
 RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
