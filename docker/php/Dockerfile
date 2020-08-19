@@ -1,6 +1,7 @@
 FROM php:7.3-fpm
 COPY php.ini /usr/local/etc/php/
 COPY docker.conf /usr/local/etc/php-fpm.d/docker.conf
+COPY .bashrc /root/
 
 RUN apt-get update \
   && apt-get install -y zlib1g-dev default-mysql-client curl gnupg procps wget tzdata \
@@ -33,6 +34,8 @@ ENV COMPOSER_HOME /composer
 
 ENV PATH $PATH:/composer/vendor/bin
 
+WORKDIR /root
+RUN git clone https://github.com/seebi/dircolors-solarized
 
 WORKDIR /var/www
 
